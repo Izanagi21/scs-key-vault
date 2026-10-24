@@ -1,0 +1,9 @@
+export interface FaqItem { question: string; answer: string }
+export const faq: FaqItem[] = [
+  { question: "What is SCS Key Vault?", answer: "SCS Key Vault is a smart fingerprint key holder system developed as an SCS capstone project at City College of Tagaytay. It replaces manual key logbooks with biometric access and a real-time digital access record." },
+  { question: "Who can retrieve a key?", answer: "An enrolled and authorized user scans their fingerprint at the cabinet. After identity and access verification, the system unlocks the specific room or laboratory key slot." },
+  { question: "What can administrators see?", answer: "The admin dashboard shows key-slot availability, timestamped access logs with search and filters, summary indicators, and user management. Role-based permissions control administrative access." },
+  { question: "Does the cabinet need an internet connection?", answer: "The ESP32 uses Wi-Fi and MQTT to communicate with the backend, and the dashboard receives live updates through Socket.IO. Live monitoring depends on connectivity. Offline access, event buffering, and recovery behavior must be validated on the deployed device; this page does not promise offline operation." },
+  { question: "Does this website collect my fingerprint?", answer: "No. The fingerprint visual on this page is a simulation and collects no biometric data. Enrollment and matching belong to the physical device. The deployed system's biometric retention and handling policy should be confirmed with its administrators." },
+  { question: "Is the dashboard preview connected to a real cabinet?", answer: "No. The preview uses illustrative sample data so you can explore the interface. Open Dashboard takes you to the configured admin application once its deployment URL has been added." },
+];
